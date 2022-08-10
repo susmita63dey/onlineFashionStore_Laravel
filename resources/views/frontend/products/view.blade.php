@@ -24,7 +24,7 @@
 			<div class="card-body">
 				<div class="row">
 					<div class="col-md-4 border-right">
-						<img src="{{ asset('assets/uploads/products/'.$products->image) }}" class="w-100" alt="">
+						<img src="{{ asset('assets/uploads/products/'.$products->image) }}" class="img-fluid w-100 h-100" alt="">
 					</div>
 					<div class="col-md-8">
 						<h2 class="mb-0">
@@ -35,7 +35,7 @@
 						</h2>
 						<hr>
 						<label class="me-3">Original Price : <s>Rs {{ $products->original_price }}</s></label>
-						<label class="fw-bold">Selling Price : <s>Rs {{ $products->selling_price }}</s></label>
+						<label class="fw-bold">Selling Price : Rs {{ $products->selling_price }}</label>
 						<p class="mt-3">
 							{{ $products->description }}
 						</p>
@@ -57,7 +57,11 @@
 							</div>
 							<div class="col-md-10">
 								<br/>
-								<button type="button" class="btn btn-primary me-3 addToCartBtn float-start">Add to cart <i class="fa fa-shopping-cart"></i></button>
+								@if($products->qty > 0)
+									<button type="button" class="btn btn-primary me-3 addToCartBtn float-start">Add to cart <i class="fa fa-shopping-cart"></i></button>
+								@else
+									<button type="button" class="btn btn-primary me-3 addToCartBtn float-start" disabled>Add to cart <i class="fa fa-shopping-cart"></i></button>
+								@endif
 							</div>
 						</div>
 					</div>

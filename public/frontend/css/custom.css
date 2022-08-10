@@ -16,3 +16,11 @@
     height: 15vw;
     object-fit: cover;
 }
+.search-bar{
+  width: 40%;
+  margin-left: 5%;
+}
+
+.ui-menu{
+  z-index: 3000;
+}

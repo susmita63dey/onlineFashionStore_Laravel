@@ -14,7 +14,7 @@
 						@foreach($category as $cate)
 							<div class="col-md-3 mb-3">
 								<a href="{{ url('category/'.$cate->slug) }}">
-									<div class="card">
+									<div class="card h-100">
 										<img src="{{ asset('assets/uploads/category/'.$cate->image) }}" class="card-img-top embed-responsive-item" alt="Category Image">
 										<div class="card-body">
 											<h5>{{ $cate->name }}</h5>

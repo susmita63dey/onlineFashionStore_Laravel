@@ -6,7 +6,7 @@
 			<h4>Product Page</h4>
 		</div>
 		<div class="card-body">
-			<table class="table table-bordered table-striped">
+			<table class="table table-responsive table-bordered table-striped">
 				<thead>
 					<tr>
 						<th>Category</th>
@@ -35,11 +35,11 @@
 							<td>{{ $item->description }}</td>
 							<td>{{ $item->original_price }}</td>
 							<td>{{ $item->selling_price }}</td>
+							<td><img src="{{ asset('assets/uploads/products/'.$item->image) }}" class="cate-image" alt="Image"></td>
 							<td>{{ $item->qty }}</td>
 							<td>{{ $item->tax }}</td>
 							<td>{{ $item->status }}</td>
 							<td>{{ $item->trending }}</td>
-							<td><img src="{{ asset('assets/uploads/products/'.$item->image) }}" class="cate-image" alt="Image"></td>
 							<td>{{ $item->meta_title }}</td>
 							<td>{{ $item->meta_description }}</td>
 							<td>{{ $item->meta_keywords }}</td>
